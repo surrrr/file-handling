@@ -1,0 +1,40 @@
+#include<stdio.h>
+#include <string.h>
+   
+int main()
+{
+  
+    // Declare the file pointer
+    FILE *fileP ;
+      
+    char data[50];
+  
+    // Open the existing file Assignment fopen() in read mode using "r" attribute
+    filePointer = fopen("C:\Users\SURBHI GOYAL\Desktop\Special Sem\assignment.txt", "r") ;
+      
+    // Check if this filePointer is null
+   
+    if ( filePointer == NULL )
+    {
+        printf( " file failed to open." ) ;
+    }
+    else
+    {
+          
+        printf("The file is now opened.\n") ;
+         
+        //read data using fgets() method
+        while( fgets ( data, 50, fileP ) != NULL )
+        {
+          
+            printf( "%s" , data ) ;
+         }
+          
+        // Closing the file using fclose()
+        fclose(fileP) ;
+          
+        printf("Data successfully read from file \n");
+        printf("The file is now closed.") ;
+    }
+    return 0;        
+}
